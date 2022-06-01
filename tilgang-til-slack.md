@@ -10,7 +10,7 @@ Hvis man allerede har bruker som er med i AD-gruppa:
 3. Logg inn med AD-konto i Miljødirektoratet. For eksterne er mailen som skal benyttes på formatet ekstern_brukernavn@miljodir.no. (Obs: hvis du allerede er logget inn med en annen konto på Microsoft er det ikke sikkert du får muligheten til å logge inn med en annen konto. Gå isåfall på miljodir.slack.com i incognito mode, eller logg ut av den brukeren du allerede er innlogga med, og prøv igjen)
 4. Så skal man være inne på Slack :tada:
 
-<h2>Hvordan få AD-konto</h2>
+## Hvordan få AD-konto
 
 Teamansvarlige og prosjektledere kan bestille AD-kontoer for sine innleide medarbeidere/prosjektdeltakere. Dette gjøres ved å sende en epost til ithjelp@miljodir.no med "Devops" som første ord i subject. Eposten må inneholde følgende:
 1. Fullt navn
