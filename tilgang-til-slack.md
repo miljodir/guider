@@ -17,7 +17,7 @@ Teamansvarlige og prosjektledere kan bestille AD-kontoer for sine innleide medar
 2. Firma
 3. epost
 4. mobilnummer
-5. startdato for engagement
+5. startdato for engasjement
 6. sluttdato (om den er kjent, hvis ikke settes den til maks ett år frem i tid)
 7. ønskede tilganger (i dette tilfellet Slack)
 
