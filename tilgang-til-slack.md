@@ -26,6 +26,6 @@ Teamansvarlige og prosjektledere kan bestille AD-kontoer for sine innleide medar
 - Ikke del persondata eller andre ting som er sensitive (f.eks. ting som er unntatt offentlighet) på Slack.
 - Ikke del data som kan kompromittere sikkerheten, integriteten eller autentisitet til applikasjoner eller brukerne av dem på Slack. Typiske eksempler på slike ting er innloggingstokens, passord.
 - Ikke bruk @ channel med mindre det strengt talt er nødvendig, da det gjør at alle i den kanalen det gjelder får en notification. Vurder hva som er relevant og viktig å vite om for hvem.
-- Legg gjerne inn hvilket team du jobber i, hva du jobber med, og hvor du jobber i profilen din på Slack. Trykk på personikonet øverst til høyre :point_right: -Profile :point_right: Edit profile.
+- Legg gjerne inn hvilket team du jobber i, hva du jobber med, og hvor du jobber i profilen din på Slack. Legg også inn et bilde i profilen din hvor en ser at det er deg. Trykk på personikonet øverst til høyre :point_right: -Profile :point_right: Edit profile.
 - Opprett gjerne en ny kanal for teamet ditt eller et tema du er interessert i, men sjekk gjerne om det fins en kanal for temaet fra før.
 
