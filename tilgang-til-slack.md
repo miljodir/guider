@@ -1,6 +1,6 @@
 # Hvordan få tilgang til Slack som ekstern
 
-Slacken til Miljødirektoratet har påkrevd SSO pålogging via Miljødirektoratet sin EntraID hos Microsoft. For at eksterne skal få logget inn på Slack må man ha en AD-bruker i Miljødirektoratet, og denne brukeren må være med i gruppen som heter slack-tilgang i AD (den snkroniseres automatisk til EntraID). 
+Slacken til Miljødirektoratet har påkrevd SSO pålogging via Miljødirektoratet sin EntraID hos Microsoft. For at eksterne skal få logget inn på Slack må man ha en AD-bruker i Miljødirektoratet, og denne brukeren må være med i gruppen som heter slack-tilgang i AD (den synkroniseres automatisk til EntraID). 
 
 Hvis du mangler bruker, les "Hvordan få AD-konto" nedenfor.
 
