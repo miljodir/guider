@@ -1,4 +1,4 @@
-# Hvordan få tilgang til internal og private repositorys? 
+# Hvordan få tilgang til internal- og private repositories? 
 
 -Tilgang for Github-brukere til Github-organisasjonen skal lenkes opp mot Miljødirektoratets Azure AD tenant. 
 Koblingen kan gjøres ved å være pålogget egen Github-konto, og deretter autentisere dere mot Azure AD med en @miljodir.no-bruker.
