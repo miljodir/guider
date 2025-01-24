@@ -1,12 +1,12 @@
 # Svartjenesten: En guide for utvikling av løsning for å koble på Dialogen/Nilex
 
-Vi ønsker å få utarbeidet en detaljert veiledning for hvordan man kan sette opp et skjema slik vi har gjort på [Svartjenesten](https://www.miljodirektoratet.no/svartjenesten) - miljodirektoratet.no og API-integrasjon mellom Nilex/Dialogen og våre interne systemer.
+Dette er en detaljert veiledning for hvordan man kan sette opp et skjema slik det er gjort på [Svartjenesten- miljodirektoratet.no](https://www.miljodirektoratet.no/svartjenesten)  og API-integrasjon mellom Nilex/Dialogen og våre interne systemer.
 
-Formålet er at andre nettjenester - som ny Avfallsdeklarering.no, Tilde og andre - kan inkludere en modul for henvendelser som sendes inn i Dialogen
+Formålet er at andre nettjenester - som ny Avfallsdeklarering.no, Tilde og andre - kan inkludere en modul for henvendelser som sendes inn i Dialogen.
 
 Målet med denne veiledningen er å sikre at vi har en pålitelig og enkel metode for å sette opp skjema og API-integrasjon mellom Nilex og våre interne systemer. Dette vil bidra til å forbedre effektiviteten og brukervennligheten av våre tjenester.
 
-Dokumentasjon om APIet fra Nilex [foreligger her](https://nspdoc.nspnilex.com/11/en-US/Admin/index.html#!Documents/nsppublicapi.htm)
+Dokumentasjon om APIet fra Nilex [finnes her](https://nspdoc.nspnilex.com/11/en-US/Admin/index.html#!Documents/nsppublicapi.htm)
 
 ## Inndeling
 
@@ -57,7 +57,7 @@ Denne komponenten lastes inn som en iframe, og krever at man har satt opp en Cop
 
 ## Oppsett
 
-Det må settes opp en Nilex-backend i kundens miljø. Dette gjøres av leverandøren og er utenfor skopet til denne veiledningen.
+Det må settes opp en Nilex-backend i kundens miljø. Dette gjøres av leverandøren og er utenfor scopet til denne veiledningen.
 Backend eksponerer et HTTP-API som andre løsninger kan kommunisere med. Denne veiledningen gjelder innsending av forespørsler.
 
 ## Frontend
@@ -110,7 +110,7 @@ Responsen ser slik ut hvis det går bra:
 }
 ```
 
-Deretter sender man med bearer token'et i Authorization header for alle requester, det vil si
+Deretter sender man med bearer token'et i Authorization header for alle requester, det vil si:
 
 ```
 Authorization: Bearer {token}
@@ -118,7 +118,7 @@ Authorization: Bearer {token}
 
 ### Uthenting av bruker
 
-Nilex lagrer brukere basert på e-post-adressen. Før innsending av forespørsel må man forsøke å søke opp bruker-iden til gitt e-postadresse. Det gjør man ved å sende inn en SearchDto til endepunktet under:
+Nilex lagrer brukere basert på e-post-adressen. Før innsending av forespørsel må man forsøke å søke opp bruker-ID'en til gitt e-postadresse. Det gjør man ved å sende inn en SearchDto til endepunktet under:
 
 ```json
 {
@@ -156,7 +156,7 @@ Hvis Data-arrayet er tomt, finnes ikke brukeren.
 
 ### Opprettelse av bruker
 
-Dersom brukeren ikke finnes fra før av må det opprettes en ny brukerid. Dette gjøres ved å POSTe en PersonDto til endepunktet under.
+Dersom brukeren ikke finnes fra før, må det opprettes en ny brukerid. Dette gjøres ved å POSTe en PersonDto til endepunktet under:
 
 ```json
 {
@@ -174,7 +174,7 @@ Dersom brukeren ikke finnes fra før av må det opprettes en ny brukerid. Dette 
 POST https://{settings.nilexApiUrl}/api/publicapi/saveentity
 ```
 
-Responsen her indikerer om det oppsto feil, hvis det ikke oppsto feil ligger den nye bruker-iden i feltet Data.
+Responsen her indikerer om det oppsto feil, hvis det ikke oppsto feil ligger den nye bruker-ID'en i feltet Data:
 
 ```json
 {
@@ -191,10 +191,10 @@ Til slutt kan man sende inn forespørselen med bruker-id til innsenderen.
 Noen ting å merke seg her:
 
 - BaseEntityStatusId er hardkodet til 1 - enhetstype "Henvendelse". Dette vil variere fra type henvendelse og i hver Nilex installasjon, så her må man koordinere med det som ligger på Enheter i Nilex.
-- CategoryId er definert i Nilex, så det samme som steget over gjelder, man må koordinere CategoryId med de kategoriene man viser bruker i dropdown.
+- CategoryId er definert i Nilex, så det samme som steget over gjelder, man må koordinere CategoryId med de kategoriene man viser brukeren i dropdown.
 - baseEndUser er bruker-id fra tidligere steg
 - attachment-dto sin "data" er base64-encodet filvedlegg
-- u_Opprinnelse er et brukerdefinert felt, ikke Nilex standard, og brukes til å fortelle hvor henendelsen er sendt inn fra.
+- u_Opprinnelse er et brukerdefinert felt, ikke Nilex standard, og brukes til å fortelle hvor henvendelsen er sendt inn fra.
 
 ```json
 {
@@ -219,7 +219,7 @@ Noen ting å merke seg her:
 }
 ```
 
-Objektet sendes til 
+Objektet sendes til: 
 ```
 POST https://{settings.nilexApiUrl}/api/publicapi/saveentity
 ```
@@ -260,3 +260,4 @@ Hvis man har feil brukernavn eller passord, vil token-endepunktet indikere det m
 
 Dersom tokenet er ugyldig for en operasjon vil man få feilkode 401 Unauthorized.
 Token kan være gått ut på tid eller brukeren har ikke fått tilgang til den operasjonen man prøver å utføre.
+
