@@ -1,4 +1,4 @@
-# MAP Mijødirektoratets applikasjonsplattform
+# MAP Miljødirektoratets applikasjonsplattform
 ## MAP-team
 Leverer felles plattform med IT-tjenester og faglig arbeidsstøtte til IT-produktteamene. 
 Dette innebærer blant annet å administrere-, drifte-, vedlikeholde- og videreutvikle MAP. 
